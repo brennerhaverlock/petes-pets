@@ -1,6 +1,6 @@
 # Pete's Pet Emporium!
 
-This is the starter project of the Pete's Pet tutorial.
+This is the Brenner's project of the Pete's Pet tutorial.
 
 ## Tasks
 
