@@ -18,6 +18,7 @@ block content
             .form-group
                 label Species*
                 input.form-control(name="species" required)
+            
             .form-group
                 label Rectangular Image URL*
                 input.form-control(name="picUrl" required type="url")
@@ -28,6 +29,10 @@ block content
                 label Favorite Food*
                 input.form-control(name="favoriteFood" required)
             .form-group
+                label Price*
+                textarea.form-control(name="price" required type="number") 
+            .form-group
                 label Description*
-                textarea.form-control(name="description" required minlength="140")  
+                textarea.form-control(name="description" required minlength="140") 
+            
             button(type="submit").btn.btn-primary Save
