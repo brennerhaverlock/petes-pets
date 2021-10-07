@@ -20,8 +20,10 @@ const PetSchema = new Schema({
 },
 {
   timestamps: true
+
 });
 
 PetSchema.plugin(mongoosePaginate);
+
 
 module.exports = mongoose.model('Pet', PetSchema);

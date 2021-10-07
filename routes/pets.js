@@ -6,9 +6,24 @@ module.exports = (app) => {
 
   // INDEX PET => index.js
 
-  // NEW PET
+  //NEW PET
   app.get('/pets/new', (req, res) => {
     res.render('pets-new');
+  });
+
+  // pets.js
+  // CREATE PET
+  app.post('/pets', (req, res) => {
+    var pet = new Pet(req.body);
+
+    pet.save()
+      .then((pet) => {
+        res.send({ pet: pet });
+      })
+      .catch((err) => {
+        // STATUS OF 400 FOR VALIDATIONS
+        res.status(400).send(err.errors);
+      }) ;
   });
 
   // SEARCH PET
